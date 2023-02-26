@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { nanoid } from 'nanoid';
+
 import styles from './App.module.css';
+
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
@@ -18,7 +21,7 @@ class App extends Component {
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
     const contact = {
-      id: String(Date.now()),
+      id: nanoid(),
       name,
       number,
     };
