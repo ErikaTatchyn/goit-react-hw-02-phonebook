@@ -69,7 +69,7 @@ class App extends Component {
         <ContactForm onAddContact={this.addContact} />
 
         <h2 className={styles.title}>Contacts</h2>
-        {visibleContacts.length > 0 ? (
+        {this.state.contacts.length > 0 ? (
           <div>
             <Filter value={filter} onChange={this.changeFilter} />
             <ContactList
